@@ -85,7 +85,7 @@ const Invoice = () => {
             }}>
         <DataGrid 
         sx={{fontSize: "20px"}}
-        checkboxSelection = "true"
+        checkboxSelection =  {true}
         rows={mockDataInvoices} 
         columns={columns} />
                 

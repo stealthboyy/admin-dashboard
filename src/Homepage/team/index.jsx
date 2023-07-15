@@ -90,7 +90,7 @@ const Team = () => {
                 "& .MuiDataGrid-virtualScroller": {
                     backgroundColor: colors.primary[400],
                   },
-               
+                
                 "& .MuiCheckbox-root": {
                     color: `${colors.greenAccent[100]} !important`,
                   },
@@ -98,7 +98,7 @@ const Team = () => {
 
             }}>
                 <DataGrid style={{fontSize: "20px"}}
-                checkboxSelection ="true"
+                checkboxSelection = {true}
                 rows={mockDataTeam}
                 columns={columns}/>
             </Box>

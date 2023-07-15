@@ -27,10 +27,9 @@ const Form = () => {
                             display="grid"
                             gap="30px"
                             gridTemplateColumns="repeat(4, minmax(0, 1fr))"
-                            fontSize={"20px"}
+                            sx={{"& > div": { gridColumn: isNotMobile ? undefined : "span 4" } }}
                         >
                             <TextField
-                            
                                         fullWidth
                                         variant="filled"
                                         type="text"
@@ -42,7 +41,6 @@ const Form = () => {
                                         error={!!touched.firstName && !!errors.firstName}
                                         helperText={touched.firstName && errors.firstName}
                                         sx={{ gridColumn: "span 2" }}
-                                        sx={{fontSize: "40px"}}
                                     />
                                     <TextField
                                         fullWidth
