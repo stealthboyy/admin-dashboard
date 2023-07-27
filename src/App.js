@@ -10,9 +10,9 @@ import Invoice from "./Homepage/invoices";
 import Form from "./Homepage/form";
 // import Bar from "./Homepage/bar"
 // import Pie from "./Homepage/pie"
-// import FAQ from "./Homepage/faq"
+import FAQ from "./Homepage/faq"
 // import Geography from "./Homepage/geography"
-// import Calendar from "./Homepage/calendar"
+import Calendar from "./Homepage/calendar"
 
 
 function App() {
@@ -28,9 +28,7 @@ function App() {
           <Topbar/>
           
           <Routes>
-            <Route path="/" element={<Dashboard/>}>
-              
-            </Route>
+            <Route path="/" element={<Dashboard/>}></Route>
             <Route path="/team" element= {<Team/>}></Route>
             <Route path="/contacts"  element= {<Contacts/>} ></Route>
             <Route path="/invoices" element= {<Invoice/>}></Route>
@@ -39,9 +37,9 @@ function App() {
             {/* <Route path="/"><Bar/></Route> */}
             {/* <Route path="/"><Line/></Route> */}
             {/* <Route path="/"><Pie/></Route> */}
-            {/* <Route path="/"><FAQ/></Route> */}
+            <Route path="/faq" element={<FAQ/>} ></Route>
             {/* <Route path="/"><Geography/></Route> */}
-            {/* <Route path="/"><Calendar/></Route> */}
+            <Route path="/calendar" element={<Calendar/>}></Route>
           </Routes>
           </main>
         </div>

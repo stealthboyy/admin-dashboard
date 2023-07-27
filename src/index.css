@@ -8,12 +8,16 @@ body,
     height: 100%;
     overflow-x: hidden;
     width: 100%;
+    font-size: 20px;
     font-family: 'Source Sans Pro', sans-serif;
+    cursor: context-menu;
+    cursor: pointer;
 }
 
 .app {
     display: flex;
     position: relative;
+    
 }
 
 ::-webkit-scrollbar {

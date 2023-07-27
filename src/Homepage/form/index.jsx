@@ -19,17 +19,19 @@ const Form = () => {
             <Formik
                 onSubmit={handleFormSubmit}
                 initialValues={initialValues}
-                validationTest={checkoutTest} 
+                validationSchema={checkoutTest} 
             >
                {({values, errors,touched, handleBlur,  handleChange, handleSubmit}) => (
-                    <form onSubmit={handleSubmit} >
+                    <form 
+                     onSubmit={handleSubmit} >
                         <Box
                             display="grid"
                             gap="30px"
                             gridTemplateColumns="repeat(4, minmax(0, 1fr))"
-                            sx={{"& > div": { gridColumn: isNotMobile ? undefined : "span 4" } }}
+                            sx={{"& > div": { gridColumn: isNotMobile ? undefined : "span 2" }  }}
                         >
                             <TextField
+                                        size="Normal"
                                         fullWidth
                                         variant="filled"
                                         type="text"
@@ -40,7 +42,7 @@ const Form = () => {
                                         name="firstName"
                                         error={!!touched.firstName && !!errors.firstName}
                                         helperText={touched.firstName && errors.firstName}
-                                        sx={{ gridColumn: "span 2" }}
+                                        sx={{ gridColumn: "span 2"}}
                                     />
                                     <TextField
                                         fullWidth
@@ -111,6 +113,14 @@ const Form = () => {
                     </form>
                )}
             </Formik>
+
+            <Button 
+            variant="contained"
+            onClick = {() => {alert("PLEASE FILL THE FORM ACCURATELY.")}}
+            sx= {{marginTop: "25px" }}
+            color = "success">
+                SUBMIT FORM
+            </Button>
         </Box>
     );
 };
@@ -126,12 +136,12 @@ const initialValues = {
   };
 
 const checkoutTest = yup.object().shape ({
-    firstName: yup.string().required("required"), //if there is no input,upon validation give a required! message.
-    lastName: yup.string().required("required"),
-    dateOfBirth: yup.string().required("required"),
-    email: yup.string().required("required"),
-    contact: yup.string().required("required"),
-    address: yup.string().required("required")
+    firstName: yup.string().required("Required"), //if there is no input,upon validation give a required! message.
+    lastName: yup.string().required("Required"),
+    dateOfBirth: yup.string().required("Required"),
+    email: yup.string().email("invalid email").required("Required"),
+    contact: yup.string().required("Required"),
+    address: yup.string().required("Required")
 });
   
 
