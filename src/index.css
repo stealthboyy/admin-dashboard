@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+imp
 
 html,
 body,
@@ -10,8 +11,6 @@ body,
     width: 100%;
     font-size: 20px;
     font-family: 'Source Sans Pro', sans-serif;
-    cursor: context-menu;
-    cursor: pointer;
 }
 
 .app {
@@ -36,4 +35,58 @@ body,
 
 ::-webkit-scrollbar-track:hover {
     background: #555;
+}
+
+/* settings page */
+
+.settings-navbar{
+    /* background-color: blue; */
+    margin: 40px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3px solid #c2c2c2;
+    
+}
+
+.settings-navbar button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px 50px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #e0e0e0;
+    
+}
+
+.settings-navbar button:active {
+    background-color: #1f2a40;
+    font-size: 20px;
+    border: none;
+
+}
+
+.dp {
+    color: #a3a3a3;
+    margin: 30px 0 20px 0;
+}
+
+.update-dp { 
+    display: flex;
+    align-items: center;
+}
+
+
+.update-dp img {
+    margin-right:  20px ;
+}
+
+ 
+.update-dp button {
+    padding: 10px 40px ; 
+    margin-left: 10px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
 }

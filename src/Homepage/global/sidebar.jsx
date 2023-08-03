@@ -15,7 +15,8 @@ import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
 import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
-import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+
 
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -44,7 +45,7 @@ const Sidebar = ()  => {
 
 
     return (
-        <Box sx= {{
+        <Box sx= {{ 
             "& .pro-sidebar-inner": {
                 background: `${colors.primary[400]} !important`
             },
@@ -190,7 +191,7 @@ const Sidebar = ()  => {
                     color={colors.grey[300]}
                     sx={{ m: "15px 0 5px 20px" }}
                     >
-                    Charts
+                    Others
                     </Typography>
                     <Item
                     title="Bar Chart"
@@ -214,9 +215,9 @@ const Sidebar = ()  => {
                     setSelected={setSelected}
                     />
                     <Item
-                    title="Geography Chart"
-                    to="/geography"
-                    icon={<MapOutlinedIcon />}
+                    title="Settings"
+                    to="/admin_settings"
+                    icon={<SettingsOutlinedIcon/>}
                     selected={selected}
                     setSelected={setSelected}
                     />

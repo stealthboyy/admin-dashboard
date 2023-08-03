@@ -9,7 +9,7 @@ import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import LineChart from "../../components/lineChart";
 // import GeographyChart from "../../components/GeographyChart";
-// import BarChart from "../../components/BarChart";
+import BarChart from "../../components/barChart";
 import ProgressCircle from "../../components/progressCircle";
 import { mockTransactions} from "../../data/mockData"
 
@@ -239,7 +239,7 @@ const Dashboard = ()  => {
             Sales Quantity
           </Typography>
           <Box height="250px" mt="-20px">
-            {/* <BarChart isDashboard={true} /> */}
+            <BarChart isDashboard={true} />
           </Box>
         </Box>
         <Box

@@ -11,7 +11,7 @@ import Form from "./Homepage/form";
 // import Bar from "./Homepage/bar"
 // import Pie from "./Homepage/pie"
 import FAQ from "./Homepage/faq"
-// import Geography from "./Homepage/geography"
+import Settings from "./Homepage/admin_settings";
 import Calendar from "./Homepage/calendar"
 
 
@@ -38,7 +38,7 @@ function App() {
             {/* <Route path="/"><Line/></Route> */}
             {/* <Route path="/"><Pie/></Route> */}
             <Route path="/faq" element={<FAQ/>} ></Route>
-            {/* <Route path="/"><Geography/></Route> */}
+            <Route path="/admin_settings" element = {<Settings/>}></Route>
             <Route path="/calendar" element={<Calendar/>}></Route>
           </Routes>
           </main>
