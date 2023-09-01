@@ -18,7 +18,7 @@ import Calendar from "./Homepage/calendar"
 function App() {
   const [theme, colorMode] = useMode();
 
-  return (
+  return ( 
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
@@ -26,7 +26,6 @@ function App() {
           <Sidebar/>
           <main className="content">
           <Topbar/>
-          
           <Routes>
             <Route path="/" element={<Dashboard/>}></Route>
             <Route path="/team" element= {<Team/>}></Route>

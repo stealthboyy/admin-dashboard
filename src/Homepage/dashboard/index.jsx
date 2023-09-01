@@ -8,7 +8,7 @@ import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 // import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import LineChart from "../../components/lineChart";
-// import GeographyChart from "../../components/GeographyChart";
+import WeatherApi from "../weather";
 import BarChart from "../../components/barChart";
 import ProgressCircle from "../../components/progressCircle";
 import { mockTransactions} from "../../data/mockData"
@@ -23,7 +23,7 @@ const Dashboard = ()  => {
         <Box display="flex" justifyContent="space-between" alignItems="center">
             <Header  
             title="DASHBOARD" 
-            subTitle="Welcome, Olajide-Oke." />
+            subTitle="Welcome, Olajide-Oke."/>
         
             <Box>
                 <Button sx={{backgroundColor: colors.blueAccent[600],
@@ -253,10 +253,11 @@ const Dashboard = ()  => {
             fontWeight="600"
             sx={{ marginBottom: "15px" }}
           >
-            Geography Based Traffic
+            Geography Based Traffic:
           </Typography>
           <Box height="200px">
-            {/* <GeographyChart isDashboard={true} /> */}
+          <WeatherApi/>
+            
           </Box>
         </Box>
         </Box>

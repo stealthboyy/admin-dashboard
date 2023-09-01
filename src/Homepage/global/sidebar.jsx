@@ -43,7 +43,6 @@ const Sidebar = ()  => {
     const [isCollapsed, setIsCollapsed] = useState(false); //represents when sidebar collapses... i.e when another page is opened
     const [selected, setSelected] = useState("Dashboard"); // THE STATE THAT CHANGES  WHEN A SIDEBAR ICON IS CLICKED
 
-
     return (
         <Box sx= {{ 
             "& .pro-sidebar-inner": {
@@ -194,7 +193,7 @@ const Sidebar = ()  => {
                     Others
                     </Typography>
                     <Item
-                    title="Bar Chart"
+                    title="WeatherChart"
                     to="/bar"
                     icon={<BarChartOutlinedIcon />}
                     selected={selected}
